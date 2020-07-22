@@ -78,6 +78,8 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     public LocaleResolver localeResolver() {
 //        SessionLocaleResolver localeResolver = new SessionLocaleResolver();
         CookieLocaleResolver localeResolver = new CookieLocaleResolver();
+        //add cookie age for window
+        localeResolver.setCookieMaxAge(1000);
         return localeResolver;
     }
 
